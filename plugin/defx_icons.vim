@@ -5,7 +5,7 @@ endif
 let g:loaded_defx_icons = 1
 
 let s:enable_syntax_highlight = get(g:, 'defx_icons_enable_syntax_highlight', 1)
-let s:column_length = get(g:, 'defx_icons_column_length', 1)
+let s:column_length = get(g:, 'defx_icons_column_length', 2)
 let s:parent_icon = get(g:, 'defx_icons_parent_icon', '')
 let s:directory_icon = get(g:, 'defx_icons_directory_icon', '')
 let s:mark_icon = get(g: , 'defx_icons_mark_icon', '*')
@@ -15,6 +15,10 @@ let s:root_opened_tree_icon = get(g:, 'defx_icons_root_opened_tree_icon', '')
 let s:nested_closed_tree_icon = get(g: ,'defx_icons_nested_closed_tree_icon', '')
 let s:nested_opened_tree_icon = get(g: ,'defx_icons_nested_opened_tree_icon', '')
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let s:colors = {
       \ 'brown': '905532',
       \ 'aqua': '3AFFDB',
@@ -33,6 +37,11 @@ let s:colors = {
       \ 'lightGreen': '31B53E',
       \ 'white': 'FFFFFF',
       \ }
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors of each lang
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let s:extensions = extend({
       \ 'styl': {'icon': '', 'color': s:colors.green},
@@ -146,10 +155,10 @@ let s:exact_matches = extend({
       \ '.gitignore': {'icon': '', 'color': s:colors.white},
       \ '.bashrc': {'icon': '', 'color': s:colors.white},
       \ '.zshrc': {'icon': '', 'color': s:colors.white},
-      \ '.vimrc': {'icon': '', 'color': s:colors.white},
-      \ '.gvimrc': {'icon': '', 'color': s:colors.white},
-      \ '_vimrc': {'icon': '', 'color': s:colors.white},
-      \ '_gvimrc': {'icon': '', 'color': s:colors.white},
+      \ '.vimrc': {'icon': '', 'color': s:colors.green},
+      \ '.gvimrc': {'icon': '', 'color': s:colors.green},
+      \ '_vimrc': {'icon': '', 'color': s:colors.green},
+      \ '_gvimrc': {'icon': '', 'color': s:colors.green},
       \ '.bashprofile': {'icon': '', 'color': s:colors.white},
       \ 'favicon.ico': {'icon': '', 'color': s:colors.yellow},
       \ 'license': {'icon': '', 'color': s:colors.white},
@@ -168,7 +177,7 @@ let s:pattern_matches = extend({
       \ '.*materialize.*\.js$': {'icon': '', 'color': s:colors.salmon},
       \ '.*materialize.*\.css$': {'icon': '', 'color': s:colors.salmon},
       \ '.*mootools.*\.js$': {'icon': '', 'color': s:colors.white},
-      \ '.*vimrc.*': {'icon': '', 'color': s:colors.white},
+      \ '.*vimrc.*': {'icon': '', 'color': s:colors.green},
       \ 'Vagrantfile$': {'icon': '', 'color': s:colors.white},
       \ }, get(g:, 'defx_icon_pattern_matches', {}))
 
